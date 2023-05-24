@@ -72,6 +72,10 @@ def process_request(request):
 #START PYTHON FLASK CODE
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return 'Hello, World!'
+
 #HTTPS POST request to send user response to server, find bot response
 #Then HTTP GET request to return bot response to frontend
 @app.route("/userResponse", methods=['GET','POST'])
