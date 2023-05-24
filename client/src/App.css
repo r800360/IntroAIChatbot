@@ -1,0 +1,174 @@
+.App {
+  /*flex:1;*/
+  text-align: center;
+  display: flex;
+  background-color: #282c34;
+  color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+span {
+  white-space: pre-wrap;
+}
+
+.sidemenu {
+  width: 260px;
+  padding: 10px;
+  /*border:1px solid red;*/
+  background-color: #202123;
+}
+
+/* Create layout for bot and user messages as well as message states using onpress*/
+
+.side-menu-button {
+  padding: 15px;
+  border: 1px solid white;
+  border-radius: 5px;
+  text-align: left;
+  transition: ease 0.25s all;
+}
+
+.side-menu-button:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.chatbox {
+  flex: 1;
+  /*border:1px solid red;*/
+  position: relative;
+  background-color: #343541;
+}
+
+.chat-log {
+  text-align: left;
+  height: 85%;
+  overflow-y: scroll;
+}
+
+.chat-message-container {
+  display: flex;
+}
+
+.chat-message-container.bot {
+  display: flex;
+  background-color: #444654;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: black;
+}
+
+
+.chat-message {
+  max-width: 900px;
+  margin-left: auto; margin-right: auto;
+  display: flex;
+  padding: 24px;
+  padding-left: 16px; 
+  padding-right: 16px;
+}
+
+.avatar.bot {
+  /*
+  background: #10a37f;
+  border-radius: 10px;
+  width: 30px;
+  height: 30px;
+  
+  margin-top: 10px;*/
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.25);
+  border-color: #edb053;
+  border-style: solid;
+  border-width: 8px;
+  border-radius: 15px;
+  background-color: rgba(68,70,84,1);
+}
+
+.avatar {
+  /*margin-top: 10px;*/
+  background-color: #19c37d;
+  border-radius: 10px;
+  width: 30px;
+  height: 30px;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.25);
+}
+
+/*
+--n:53
+backgrond-size: type length
+t(seconds): type speed
+
+*/
+
+.message {
+  font-family: monospace;
+  font-size: 13px;
+  padding-left: 24px; padding-right: 24px;
+  inline-size: 820px;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+.message.bot {
+  font-family: monospace;
+  font-size: 13px;
+  color: #0000;
+  background:
+    linear-gradient(white 0 0) 0 0;
+  background-size:calc(var(--n) * 2.5ch) 100%;
+
+  background-repeat: no-repeat;
+  animation: 
+    t calc(var(--n) *.1s) steps(var(--n)) forwards;
+  
+  padding-left: 24px; padding-right: 24px;
+  inline-size: 820px;
+  word-break: normal;
+  overflow-wrap: break-word;
+  color:#0000;
+  -webkit-background-clip:text;
+  background-clip:text;
+  animation-timing-function:steps(var(--n))
+}
+@keyframes t{
+  from {background-size:0 100%}
+}
+/*
+.clip {
+  color:#0000;
+  -webkit-background-clip:text;
+  background-clip:text;
+}
+.step {
+  animation-timing-function:steps(var(--n))
+}
+*/
+
+
+
+.chat-input-holder {
+  padding: 24px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.chat-input-textarea {
+  background-color: #40414f;
+  width: 90%; height: 10%;
+  max-height: 200px;
+  resize: none;
+  padding: 12px;
+  color: white;
+  font-size: 1.25em;
+  border-radius: 5px;
+  border: none; 
+  border-color: none;
+  outline: none;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.25);
+}
+
