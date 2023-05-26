@@ -14,7 +14,7 @@ const userChristian = "Are you a Christian?: "
 const userClass = "Are you part of Mrs. Shimada's Introduction to AI class?: "
 const userQuestions = [userName, userEmail, userAge, userChristian, userClass]
 //POST list for fetch requests for last five questions
-const postList = ["/nameResponse","/emailResponse","/ageResponse","/christianResponse","/classResponse"]
+const postList = ["http://aichatbotspiritflaskbackend.pythonanywhere.com/nameResponse","http://aichatbotspiritflaskbackend.pythonanywhere.com/emailResponse","http://aichatbotspiritflaskbackend.pythonanywhere.com/ageResponse","http://aichatbotspiritflaskbackend.pythonanywhere.com/christianResponse","http://aichatbotspiritflaskbackend.pythonanywhere.com/classResponse"]
 /*
 function NewlineText(props) {
   const text = props.text;
@@ -78,7 +78,7 @@ function App() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' }
     };
-    fetch("/bigClean", requestOptions).then(response => response.json());
+    fetch("http://aichatbotspiritflaskbackend.pythonanywhere.com/bigClean", requestOptions).then(response => response.json());
     
     //session_completed=false;
   }
@@ -155,7 +155,7 @@ function App() {
       //I change retriever to message: retriever
       body: JSON.stringify(retriever)
     };
-    const response = await fetch("/userResponse", requestOptions);
+    const response = await fetch("http://aichatbotspiritflaskbackend.pythonanywhere.com/userResponse", requestOptions);
     const data = await response.json();
     //console.log(JSON.stringify(data))
     if (has_exited) {
