@@ -14,7 +14,7 @@ const userChristian = "Are you a Christian?: "
 const userClass = "Are you part of Mrs. Shimada's Introduction to AI class?: "
 const userQuestions = [userName, userEmail, userAge, userChristian, userClass]
 //POST list for fetch requests for last five questions
-const postList = ["https://aichatbotspiritflaskbackend.pythonanywhere.com/nameResponse","https://aichatbotspiritflaskbackend.pythonanywhere.com/emailResponse","https://aichatbotspiritflaskbackend.pythonanywhere.com/ageResponse","https://aichatbotspiritflaskbackend.pythonanywhere.com/christianResponse","https://aichatbotspiritflaskbackend.pythonanywhere.com/classResponse"]
+const postList = ["https://r800360-cors.onrender.com/https://aichatbotspiritflaskbackend.pythonanywhere.com/nameResponse","https://r800360-cors.onrender.com/https://aichatbotspiritflaskbackend.pythonanywhere.com/emailResponse","https://r800360-cors.onrender.com/https://aichatbotspiritflaskbackend.pythonanywhere.com/ageResponse","https://r800360-cors.onrender.com/https://aichatbotspiritflaskbackend.pythonanywhere.com/christianResponse","https://r800360-cors.onrender.com/https://aichatbotspiritflaskbackend.pythonanywhere.com/classResponse"]
 /*
 function NewlineText(props) {
   const text = props.text;
@@ -78,7 +78,7 @@ function App() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' }
     };
-    fetch("https://aichatbotspiritflaskbackend.pythonanywhere.com/bigClean", requestOptions).then(response => response.json());
+    fetch("https://r800360-cors.onrender.com/https://aichatbotspiritflaskbackend.pythonanywhere.com/bigClean", requestOptions).then(response => response.json());
     
     //session_completed=false;
   }
@@ -155,7 +155,7 @@ function App() {
       //I change retriever to message: retriever
       body: JSON.stringify(retriever)
     };
-    const response = await fetch("https://aichatbotspiritflaskbackend.pythonanywhere.com/userResponse", requestOptions);
+    const response = await fetch("https://r800360-cors.onrender.com/https://aichatbotspiritflaskbackend.pythonanywhere.com/userResponse", requestOptions);
     const data = await response.json();
     //console.log(JSON.stringify(data))
     if (has_exited) {
